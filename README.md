@@ -19,6 +19,53 @@ Android エミュレータ（BlueStacks 5）上で動作するアプリケーシ
 
 ---
 
+## 📸 画面イメージ・動作実績
+
+### 1. HTML 検証レポート（自動生成ダッシュボード）
+テスト稼働時間・サイクル数・検知件数のサマリーに加え、Chart.js によるリソース消費推移グラフと、Logcat から自動抽出したエラー抜粋を一覧表示します。
+
+**1. リソース消費推移グラフ ＆ サマリー**
+!(<img width="1410" height="798" alt="スクリーンショット 2026-11-13 133633" src="https://github.com/user-attachments/assets/6f9ef4ea-3dcd-4abc-8dc7-701db0af436d" />
+)
+
+**2. 発生イベント・エビデンス一覧**
+!(<img width="1118" height="842" alt="スクリーンショット 2026-11-13 133658" src="https://github.com/user-attachments/assets/71e53d6b-b370-4af5-9bf2-6baefa6f2e1b" />
+)
+
+### 2. 異常検知時の自動エビデンス撮影（撮影範囲の切替対応）
+クラッシュやタイムアウトを検知した瞬間、用途に応じて **「PC画面全体（バッチ・監視GUIの稼働状況含む）」** と **「BlueStacksウィンドウのみ」** のどちらか好きな方を自動保存できます。
+
+| PC画面全体モード（システム全体の状態記録） | BlueStacksウィンドウ限定モード |
+| :---: | :---: |
+| （<img width="1920" height="1080" alt="20261113_135222_crash" src="https://github.com/user-attachments/assets/5c2371a3-b895-4e03-be07-af923e3d3b56" />
+） | （<img width="558" height="958" alt="20261113_135337_crash" src="https://github.com/user-attachments/assets/abed4dea-bc64-41e8-8ee9-41cfb2ad6a6b" />
+） |
+
+### 3. リアルタイム外部通知（Discord / Slack Webhook）
+異常検知やデモ体験の実行時、設定した Webhook URL へ発生日時・ステージ・詳細を即時通知します。
+（<img width="922" height="342" alt="ディスコ通知" src="https://github.com/user-attachments/assets/f0fd3de3-d7e5-428f-839a-35ad9f5d9a69" />
+）
+
+### 4. メインGUI ＆ 詳細設定（4タブ構成）
+監視間隔・4段階の自動復旧モード・メモリ解放・Logcat取得時間・エラー起点ログ抽出・Webhook設定をすべてGUIからリアルタイムに変更可能です。
+
+| メイン操作パネル | タブ1：監視・復旧・デモ | タブ2：メモリ解放 |
+| :---: | :---: | :---: |
+| （<img width="387" height="783" alt="GUIメイン画面" src="https://github.com/user-attachments/assets/ca80acef-52bf-4dcf-b5ae-021de26ee447" />
+） | （<img width="434" height="357" alt="GUI詳細画面(監視設定)" src="https://github.com/user-attachments/assets/c9363892-0843-4a02-9ad4-e51d00ffebe6" />
+） | （<img width="434" height="357" alt="GUI詳細画面(メモリ解放)" src="https://github.com/user-attachments/assets/b15ad8f7-f194-441b-94f8-5d3d8725045c" />
+） |
+
+| タブ3：エビデンス・ログ抽出 | タブ4：外部通知（Webhook） |
+| :---: | :---: |
+| （<img width="434" height="357" alt="GUI詳細画面(エビデンス)" src="https://github.com/user-attachments/assets/f2daea6d-3acb-4c75-8a77-55330a7b1b2e" />
+） | （<img width="434" height="357" alt="GUI詳細画面(外部通知)" src="https://github.com/user-attachments/assets/a5d4181a-2e89-42e5-8dcf-1f41f8dd7183" />
+） |
+
+---
+<img width="1410" height="798" alt="スクリーンショット 2026-11-13 133633" src="https://github.com/user-attachments/assets/cde8ee29-81e4-45ca-b227-8e4b55646e58" />
+<img width="1410" height="798" alt="スクリーンショット 2026-11-13 133633" src="https://github.com/user-attachments/assets/abf8da0e-021e-41f5-b259-132ad9f38638" />
+
 ## 🏗️ システム構成・アーキテクチャ
 
 ```text

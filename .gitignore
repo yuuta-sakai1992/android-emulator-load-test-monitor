@@ -1,0 +1,7 @@
+# 個人の設定・Webhook URLを含むため除外（mode_config.example.ini をコピーして使用）
+mode_config.ini
+
+# 実行時に自動生成されるログ・エビデンス・レポートを除外
+load_test_log.txt
+error_logs/
+reports/
